@@ -21,6 +21,8 @@ class LocalWebsite:
         if route is None:
             split = urlsplit(url)
             route = self.routes.get(split.path + (f"?{split.query}" if split.query else ""))
+            if route is None:
+                route = self.routes.get(split.path)
         if route is None:
             return "<title>Not found</title><main><h1>404 Not found</h1></main>"
         return route(url) if callable(route) else route
@@ -90,6 +92,8 @@ class LocalBrowser:
                     if selected is not None
                     else ""
                 )
+            elif input_type in {"checkbox", "radio"}:
+                value = field.attrs.get("value", "on")
             else:
                 value = field.attrs.get("value", "")
             fields.append((name, value))
