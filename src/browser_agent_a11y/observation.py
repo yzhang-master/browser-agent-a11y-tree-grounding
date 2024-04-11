@@ -19,7 +19,9 @@ class Observation:
     svg: str
 
     def node_for_mark(self, mark: str) -> AccessibilityNode | None:
-        element_id = self.marks.get(mark)
+        element_id = next(
+            (element_id for element_id, value in self.marks.items() if value == mark), None
+        )
         if element_id is None:
             return None
         return next(
