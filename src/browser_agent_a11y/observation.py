@@ -42,7 +42,7 @@ def render_set_of_marks_svg(
     root: AccessibilityNode,
     marks: dict[str, str],
 ) -> str:
-    nodes = walk_tree(root)[1:41]
+    nodes = walk_tree(root)[1:]
     width = 960
     height = max(180, 110 + 48 * len(nodes))
     parts = [
