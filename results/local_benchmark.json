@@ -1,0 +1,62 @@
+{
+  "measured_at": "2026-11-14T15:58:19.504490+01:00",
+  "environment": "deterministic in-memory local websites; no browser package or network",
+  "tokenizer": "regex word/punctuation estimate, not provider tokenizer",
+  "screenshots": "deterministic SVG wireframes with marks, not pixel browser captures",
+  "runs": [
+    {
+      "task": "grounding-search",
+      "success": true,
+      "steps": 4,
+      "compressed_tokens": 310,
+      "full_html_tokens": 345,
+      "tokens_per_step": 77.5,
+      "token_reduction_fraction": 0.10144927536231885,
+      "final_url": "http://local.test/docs/grounding",
+      "error": "",
+      "wall_seconds": 0.0023983680002857
+    },
+    {
+      "task": "accessibility-search",
+      "success": true,
+      "steps": 4,
+      "compressed_tokens": 310,
+      "full_html_tokens": 345,
+      "tokens_per_step": 77.5,
+      "token_reduction_fraction": 0.10144927536231885,
+      "final_url": "http://local.test/docs/accessibility",
+      "error": "",
+      "wall_seconds": 0.003935618002287811
+    },
+    {
+      "task": "about-navigation",
+      "success": true,
+      "steps": 2,
+      "compressed_tokens": 125,
+      "full_html_tokens": 147,
+      "tokens_per_step": 62.5,
+      "token_reduction_fraction": 0.1496598639455783,
+      "final_url": "http://local.test/about",
+      "error": "",
+      "wall_seconds": 0.0013523050001822412
+    },
+    {
+      "task": "preferences-form",
+      "success": true,
+      "steps": 4,
+      "compressed_tokens": 226,
+      "full_html_tokens": 377,
+      "tokens_per_step": 56.5,
+      "token_reduction_fraction": 0.4005305039787799,
+      "final_url": "http://local.test/saved?subscribe=on&theme=dark",
+      "error": "",
+      "wall_seconds": 0.0017105350016208831
+    }
+  ],
+  "summary": {
+    "success": 4,
+    "tasks": 4,
+    "tokens_per_step": 69.35714285714286,
+    "token_reduction_fraction": 0.20016474464579903
+  }
+}
