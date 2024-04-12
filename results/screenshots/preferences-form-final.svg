@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="180" viewBox="0 0 960 180" role="img" aria-label="Set of marks for http://local.test/saved?subscribe=on&amp;theme=dark">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="28" y="34" font-family="sans-serif" font-size="20" font-weight="bold">http://local.test/saved?subscribe=on&amp;theme=dark</text>
+<text x="28" y="60" font-family="monospace" font-size="12" fill="#475569">http://local.test/saved?subscribe=on&amp;theme=dark</text>
+<g data-element-id="e-d9a911a405b9">
+<rect x="28" y="82" width="904" height="38" rx="5" fill="#ffffff" stroke="#e2e8f0"/>
+<text x="40" y="106" font-family="sans-serif" font-size="14" fill="#0f172a">heading: Saved</text>
+</g>
+</svg>
