@@ -225,5 +225,7 @@ def compress_tree(
     output = "\n".join(lines)
     if len(output) > max_chars:
         suffix = "\n… characters omitted"
+        if max_chars <= len(suffix):
+            return "…"[:max_chars]
         output = output[: max_chars - len(suffix)].rstrip() + suffix
     return output
