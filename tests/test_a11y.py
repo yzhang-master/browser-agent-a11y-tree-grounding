@@ -59,6 +59,7 @@ def test_compression_is_bounded_and_preserves_actionable_marks() -> None:
     tiny = compress_tree(obs.tree, marks=obs.marks, max_chars=100)
     assert len(tiny) <= 100
     assert "characters omitted" in tiny
+    assert compress_tree(obs.tree, max_chars=1) == "…"
 
 
 def test_set_of_marks_is_actual_valid_svg_with_grounding_metadata() -> None:
@@ -70,3 +71,11 @@ def test_set_of_marks_is_actual_valid_svg_with_grounding_metadata() -> None:
     assert {element.attrib["data-element-id"] for element in groups} == set(obs.marks)
     assert "<script" not in obs.svg
     assert "Search &amp; discovery" in obs.svg
+
+
+def test_svg_contains_every_available_mark_beyond_first_screen() -> None:
+    source = "".join(f'<button id="b{index}">Button {index}</button>' for index in range(45))
+    obs = observation(source)
+    root = ET.fromstring(obs.svg)
+    groups = [element for element in root.iter() if "data-mark" in element.attrib]
+    assert len(obs.marks) == len(groups) == 45
